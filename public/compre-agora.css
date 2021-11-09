@@ -1,0 +1,140 @@
+*{
+    margin:0;
+    padding:0;
+    border:0;
+    font-family: Helvetica;
+    text-decoration: none;
+    list-style: none;
+    box-sizing:border-box;
+    outline: 0;
+}
+
+.clearfix{
+    clear: both;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.container-main-compre-agora{
+    width:45%;
+    margin:0 auto;
+    padding:5%;
+    border-radius:5px;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 50%, #ffffff 100%);
+
+}
+
+.container-main-compre-agora *{
+    color:rgba(71, 61, 61, 0.986);
+}
+
+main > h2{
+    text-align: center;
+    padding: 10px;
+}
+
+#campo-cpf input[type=number]::-webkit-inner-spin-button, 
+#campo-cpf input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  
+}
+
+
+#campo-nome input, #campo-email input, #campo-cpf input,#campo-telefone input{
+    width: 100%;
+    height: 35px;
+    border:1px solid rgb(122, 120, 120);
+    margin: 10px 0 10px 0;
+    padding:0 10px 0 10px;
+}
+
+#campo-nome input:focus, #campo-email input:focus, #campo-cpf input:focus{
+    outline: 0;
+}
+
+
+
+#ast{
+    font-size: 0.8em;
+    margin:0 0 0 68%;
+}
+.form-encomenda input{
+    display:block;
+}
+
+.item{
+    font-weight: bold;
+    
+}
+
+#campo-produtos h3{
+    padding: 15px 0 15px 0;
+}
+
+input[value="Fazer Pedido"]{
+    border:1px solid olive;
+    padding: 10px;
+    background-color: rgb(193, 235, 43);
+    color:whitesmoke;
+    font-weight:bolder;
+    margin-bottom:25px;
+}
+
+input[value="Fazer Pedido"] + span {
+    font-size:1.2em;
+}
+
+#formulario{
+    padding-top: 45px;
+    padding-left: 45px;
+}
+
+#product input{
+    display: inline-block;
+}
+
+#product{
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 50% 10%;
+    grid-template-rows: 30px 30px 30px;
+    row-gap:10px;
+    margin-bottom: 25px;
+}
+
+#product span,#product input{   
+    background-color: #ffffff;
+}
+
+#product label{
+    line-height: 2;
+    background-image: linear-gradient(#FFE169, #EDC531);
+    color: #ffffff;
+    padding-left: 10px;
+    border-radius: 5px 0 0 5px;
+    border-right: 5px solid #ffffff4d;  
+}
+
+#product span{  
+    display: inline-block;
+    padding-left: 10px;
+    border-radius: 0 5px 5px 0;
+}
+
+#product input{
+   height: 30px;
+   width: 90%;
+   display: inline-block;
+   font-size: 1em;
+  
+}
+
+#main-qs *{
+    color:whitesmoke;
+}
+

@@ -1,0 +1,227 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: Helvetica;
+    text-decoration: none;
+    list-style: none;
+    box-sizing:border-box;
+    box-sizing: border-box;
+    border-collapse: collapse;
+}
+
+body{
+    background-color: black;
+}
+
+#firstbody *{
+    color:whitesmoke;
+}
+
+a:-webkit-any-link{
+    color:whitesmoke;
+}
+
+
+/* Título e logo */
+#logotitulo{
+    margin-left:45px;
+    user-select:none;
+    z-index: 10;
+    float:left;
+}
+
+
+/* Container do conteúdo principal */
+#container-main{
+    width:80%;
+    margin:0 auto;
+}
+
+
+ul#options{
+    float:right;
+    font-weight: bolder;
+}
+
+ul#options li{
+    float:left;
+    padding:25px;
+}
+
+
+
+ul#options li:hover{
+    background:linear-gradient(#FFE169, #EDC531, #A47E1B);
+}
+
+/* Imagem logo */
+#msc{
+    width:180px;
+    height:180px;
+    border-radius:360px;
+}
+
+/* Título */
+.title{
+    position:relative;
+    font-size:2.5em;
+    bottom:45px;
+    font-weight: bold;
+    text-align: center;
+}
+#logotitulo:hover h2{
+    background-image: linear-gradient(#FFE169, #EDC531, #A47E1B);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+a h2.title:last-child{
+    position: relative;
+    bottom:60px;
+}
+
+/* Container de produtos */
+#produtos{
+    overflow:hidden;
+    width:100%;
+    border-radius:5px 5px 0 0;
+    background-image: radial-gradient(circle at 50% -20.71%, #ade5ff 0, #7dcefb 25%, #3cb5f2 50%, #009ce9 75%, #0085e0 100%);
+    padding:50px 50px 0 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap:0 50px;
+}
+
+
+
+#produtos div:not(.title-price){
+    grid-row:1/2;
+    border-radius:5px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#produtos:nth-child(1){
+    
+    grid-column:1/2;
+   
+}
+
+#produtos:nth-child(2){
+    
+    grid-column:2/3;
+}
+
+#produtos:nth-child(3){
+    
+    grid-column:3/4;
+}
+
+#produtos img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    width:90%;
+}
+
+.title-prod{
+    text-align: center;
+    padding-top:5px;
+    padding-bottom: 15px;
+    font-size:1.3em;
+    color:#A2A2A2;
+}
+
+#last-price{
+    font-size:1em;
+    text-decoration:line-through;
+    padding-left: 25px;
+    color:whitesmoke;
+    opacity:0.9;
+}
+
+#best-price{
+    padding-left: 25px;
+    font-weight: bolder;
+    font-size:1.8em;
+    color: #FFFFFF;
+}
+
+#caixa-materia{
+    width:100%;
+    overflow: hidden;
+    padding:35px;
+    margin-bottom:20px;
+    border-radius:5px 5px 5px 5px;
+    background-image: radial-gradient(circle at 50% -20.71%, #ffff52 0, #e8ff56 10%, #cbfa5c 20%, #acf162 30%, #8de668 40%, #6cd86c 50%, #49c970 60%, #1abd74 70%, #00b279 80%, #00a97e 90%, #00a184 100%);
+}
+
+.materia{
+    background-color: rgb(235, 231, 226);
+    overflow: hidden;
+}
+
+.materia img{
+    width:35%;
+    float: left;
+}
+
+.materia h1,.materia p{
+    padding-left: 38%;
+    padding-right: 3%;
+}
+
+.materia h1{
+    padding-top:25px;
+}
+
+.materia p{
+    text-align:justify;
+    font-weight: 600;
+    line-height:22px;
+}
+
+.materia a,.materia h1{
+    background-image: linear-gradient(#FFE169, #EDC531, #A47E1B);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+
+.contain{
+    background-color: #FFFFFF;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    margin-bottom: 45px;
+}
+
+#produtos button{
+    background-color: #29F102;
+    border:0;
+    margin-top:15px;
+    padding:25px 0 25px 0;
+    width: 100%;
+    position:relative;
+    bottom:60px;
+    display: block;
+    color:#FFFFFF;
+    font-size: 1.3em;    
+    border-radius: 0 0 5px 5px;
+    border-bottom:1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.title-price{
+    padding-bottom:10px;
+    background-color: black;
+    width:111%;
+    position: relative;
+    left:-5.5%;
+    
+}
+
+
