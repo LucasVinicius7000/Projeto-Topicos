@@ -17,14 +17,14 @@
 
     <section>
 
-        <form class="form-encomenda" action={{ route('compre-agora') }} method="POST">
+        <form class="form-encomenda" id="form" action="{{route('pedido')}}" method="post">
             @csrf
            <label id="campo-nome" for="">
                 <input type="text" name="nome" placeholder="Nome*">   
            </label>
 
            <label id="campo-email" for="">
-                <input type="email" name="email" placeholder="E-mail*">
+                <input type="email" name="email" placeholder="E-mail*" >
            </label>
 
            <label id="campo-cpf" for="">
@@ -64,6 +64,11 @@
 
                 </div>
 
+                <div id="text">
+                    <h3>Mensagem (opcional)</h3>
+                    <textarea name="mensagem" form="form"></textarea>
+
+                </div>
 
                <input type="submit" value="Fazer Pedido">
 

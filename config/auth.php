@@ -2,6 +2,8 @@
 
 return [
 
+    
+
     /*
     |--------------------------------------------------------------------------
     | Authentication Defaults
@@ -14,9 +16,11 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'web',
+        'guard' => 'web','adm',
         'passwords' => 'users',
     ],
+
+  
 
     /*
     |--------------------------------------------------------------------------
@@ -36,10 +40,19 @@ return [
     */
 
     'guards' => [
+
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        'admin_users' => [
+            'driver' => 'session',
+            'provider' => 'admin_users',
+        ],
+       
+        
+      
     ],
 
     /*
@@ -60,15 +73,18 @@ return [
     */
 
     'providers' => [
+ 
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
+ 
+        'admin_users' => [
+            'driver' => 'database',
+            'table' => 'adms',
+        ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+       
     ],
 
     /*
@@ -93,6 +109,10 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
+
+      
+      
+      
     ],
 
     /*

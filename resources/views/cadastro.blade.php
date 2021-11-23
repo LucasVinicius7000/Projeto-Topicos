@@ -61,12 +61,15 @@
 
     .container-cadastro-login h2{
         text-align:center;
+        position: relative;
+        top:25px;
+        
     }
 
     .container-cadastro-login section.cadastro{
         border-radius:10px 0 0 10px; 
-        background:linear-gradient(#FFE169, #EDC531, #A47E1B);
-
+        background:linear-gradient(#d1a023,#ffe169b2,#edc4318f);
+        
     }
 
     .container-cadastro-login section.login{
@@ -81,20 +84,30 @@
     
     input[type="email"],input[type="password"]{
         height:35px;
+        padding-left:15px;
         border:none;
-        border-radius:20px;
+        border-radius:25px;
         display:block;
         margin:2%;
+        width:70%;
         color:black;
     }
 
-    input[type="email"]{
-        width:70%;
+   
+    .adm{
+        position: absolute;
+        bottom:1px;
+        left:2px;
     }
-
-    input[type="password"]{
-        width:40%;
+    
+    .adm button{
+        color:white;
+        background:linear-gradient(#FFE169, #EDC531, #A47E1B);;
+        padding:0 5px 0 5px;
+        border-radius:50px;
+        font-size:0.8em;
     }
+   
 
     #bt2{
         border:none;
@@ -135,48 +148,59 @@
 <main class=container-cadastro-login>
 
     <section class="cadastro">
-        <h2>Cadastre-se</h2>
-        <form action="" id="formulario">
-
+        <h2>> Cadastre-se</h2>
+        <form action="{{route('cadastrar')}}" id="formulario" method="POST">
+            @csrf
             <label>
                 E-mail: 
-                <input type="email">
+                <input type="email"  name="email" placeholder="Cadastre seu email*">
             </label>
 
             <label >
                 Senha: 
-                <input type="password">
+                <input type="password" name="password" placeholder="Defina sua senha de acesso*">
             </label>
             <BR></BR>
-            <button id="bt1"><a href={{route('compre-agora')}}> Cadastrar</a></button>
+            
+            <input id="bt1" type="submit" value="Cadastrar">
 
         </form>
     </section>
 
     <section class="login">
-        <h2>Já tem um conta? Faça Login!</h2>
-        <form action="" id="formulario">
+        <h2>> Já tem um conta? Faça Login!</h2>
+        <form method="get" id="formulario" action="{{ route('logar') }}">
+            @csrf
 
-            <label>
-                E-mail: 
-                <input type="email">
-            </label>
+            <!-- Email Address -->
+            <div>
+                <x-label for="email" :value="__('Email')" />
 
-            <label >
-                Senha: 
-                <input type="password">
-            </label>
+                <x-input id="email" class="" type="email" name="email" :value="old('email')" required autofocus />
+            </div>
 
-            <a href="">Esqueceu sua senha? Clique aqui</a>
+            <!-- Password -->
+            <div class="">
+                <x-label for="password" :value="__('Password')" />
+
+                <x-input id="password" class=""
+                                type="password"
+                                name="password"
+                                required autocomplete="current-password" />
+            </div>
             <BR></BR>
-            <button id="bt2">
-                <a href={{route('compre-agora')}} > Entrar</a>
-            </button>
+            <input id="bt2" type="submit" value="Entrar">
 
+            </div>
         </form>
     </section>
 
-    
-
 </main>
+
+    <div class="adm">
+        <button>
+            <a href="{{route('adm')}}">Administrativo</a>
+        </button>
+    </div>
+
 @endsection

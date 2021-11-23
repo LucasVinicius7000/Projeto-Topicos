@@ -138,3 +138,16 @@ input[value="Fazer Pedido"] + span {
     color:whitesmoke;
 }
 
+
+#text{
+    margin-top:-20px;
+}
+
+#text textarea{
+    resize: none;
+    padding: 0;
+    border: 1px solid #272822;
+    width: 100%;
+    height:100px;
+    margin-bottom: 20px;
+}

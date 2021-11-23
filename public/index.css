@@ -152,13 +152,14 @@ a h2.title:last-child{
 #caixa-materia{
     width:100%;
     overflow: hidden;
-    padding:35px;
+    padding:35px 0 35px 0;
     margin-bottom:20px;
     border-radius:5px 5px 5px 5px;
     background-image: radial-gradient(circle at 50% -20.71%, #ffff52 0, #e8ff56 10%, #cbfa5c 20%, #acf162 30%, #8de668 40%, #6cd86c 50%, #49c970 60%, #1abd74 70%, #00b279 80%, #00a97e 90%, #00a184 100%);
 }
 
 .materia{
+    width: 100%;
     background-color: rgb(235, 231, 226);
     overflow: hidden;
 }

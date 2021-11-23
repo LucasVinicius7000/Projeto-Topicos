@@ -44,7 +44,7 @@
 
         </div>
 
-        <button>COMPRE AGORA</button>
+        <button><a href="{{route('cadastro')}}">COMPRE AGORA</a></button>
 
 
         <div class="contain">
@@ -69,7 +69,7 @@
 
         </div>
 
-        <button>COMPRE AGORA</button>
+        <button><a href="{{route('cadastro')}}">COMPRE AGORA</a></button>
 
         <div class="contain">
             <img src="/img/pink.jpg">
@@ -90,7 +90,7 @@
 
         </div>
 
-        <button>COMPRE AGORA</button>
+        <button><a href="{{route('cadastro')}}">COMPRE AGORA</a></button>
         
 
     </section>
